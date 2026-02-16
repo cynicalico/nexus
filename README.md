@@ -39,7 +39,7 @@ Alternatively, you can consume the file through CMake's FetchContent:
 
 ```cmake
 set(NEXUS_USE_STD_TYPE_INDEX ON) # Optionally use std::type_index instead of a tag member
-FetchContent_Declare(nexus GIT_REPOSITORY https://codeberg.org/cynicalico/nexus)
+FetchContent_Declare(nexus GIT_REPOSITORY https://codeberg.org/cynicalico/nexus GIT_TAG main)
 FetchContent_MakeAvailable(nexus)
 ```
 
