@@ -45,6 +45,10 @@ public:
 
     template<typename T>
         requires IsNexusCombatible<T>
+    std::optional<ID> get_capture();
+
+    template<typename T>
+        requires IsNexusCombatible<T>
     void capture(ID id);
 
     template<typename T>
@@ -121,6 +125,14 @@ void nexus::Nexus::publish(Args &&...args) {
             if (r) r(payload);
     }
     operator delete(payload.data(), payload.size());
+}
+
+template<typename T>
+    requires nexus::IsNexusCombatible<T>
+std::optional<nexus::ID> nexus::Nexus::get_capture() {
+    const auto tag = type_tag_<T>();
+    if (captures_.contains(tag)) return captures_[tag];
+    return std::nullopt;
 }
 
 template<typename T>

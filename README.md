@@ -2,7 +2,7 @@
 
 nexus is a simple [publish/subscribe](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) implementation
 that sends structs to and from endpoints. nexus requires either a tag data member on each struct you plan on sending
-through it, or optionally a compile flag can be set to use `std::type_index`.
+through it, or optionally, a compile flag can be set to use `std::type_index`.
 
 ## Example
 
@@ -33,13 +33,13 @@ int main(int, char *[]) {
 
 ## Install
 
-nexus is header-only, so you can just copy the `nexus` directory to your project and include `nexus.hpp`.
+nexus is header-only, so you can copy the `nexus` directory to your project and include `nexus.hpp`.
 
 Alternatively, you can consume the file through CMake's FetchContent:
 
 ```cmake
 set(NEXUS_USE_STD_TYPE_INDEX ON) # Optionally use std::type_index instead of a tag member
-FetchContent_Declare(nexus GIT_REPOSITORY https://codeberg.org/cynicalico/nexus GIT_TAG main)
+FetchContent_Declare(nexus GIT_REPOSITORY https://github.com/cynicalico/nexus GIT_TAG main)
 FetchContent_MakeAvailable(nexus)
 ```
 
@@ -52,7 +52,7 @@ boundaries.
 
 If this is a concern for you, you may not wish to enable this feature, and instead rely on explicitly
 defined tags. A hash of the fully qualified name is a good alternative. This can be done easily with something
-like [murmurst](https://codeberg.org/cynicalico/murmurst) (sorry for the shameless self-promotion).
+like [murmurst](https://github.com/cynicalico/murmurst) (sorry for the shameless self-promotion).
 
 ## License
 
