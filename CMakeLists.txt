@@ -42,7 +42,12 @@ if (NEXUS_ENABLE_TEST)
     target_link_libraries(test_capture PRIVATE nexus::nexus)
     target_compile_features(test_capture PRIVATE cxx_std_20)
 
+    add_executable(test_ptr test/test_ptr.cpp)
+    target_link_libraries(test_ptr PRIVATE nexus::nexus)
+    target_compile_features(test_ptr PRIVATE cxx_std_20)
+
     add_test(NAME test_basic COMMAND $<TARGET_FILE:test_basic>)
     add_test(NAME test_capture COMMAND $<TARGET_FILE:test_capture>)
     add_test(NAME test_multiple COMMAND $<TARGET_FILE:test_multiple>)
+    add_test(NAME test_ptr COMMAND $<TARGET_FILE:test_ptr>)
 endif ()

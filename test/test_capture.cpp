@@ -9,7 +9,7 @@ struct Add {
 
 struct Mul {
 #if !defined(NEXUS_USE_STD_TYPE_INDEX)
-    static constexpr nexus::Tag NEXUS_TAG{0xdeadbeef};
+    static constexpr nexus::Tag NEXUS_TAG{0xcafebabe};
 #endif
     int n;
 };

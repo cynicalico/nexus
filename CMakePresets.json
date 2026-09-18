@@ -12,7 +12,7 @@
       "binaryDir": "${sourceDir}/build",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "NEXUS_ENABLE_TEST": "OFF"
+        "NEXUS_ENABLE_TEST": "ON"
       }
     },
     {
@@ -21,7 +21,7 @@
       "binaryDir": "${sourceDir}/build",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "NEXUS_ENABLE_TEST": "OFF"
+        "NEXUS_ENABLE_TEST": "ON"
       }
     }
   ],
